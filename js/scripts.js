@@ -21,9 +21,9 @@ $(document).ready(function() {
       console.log(favoriteStuff);
       favArray.push(favoriteStuff[1],favoriteStuff[0],favoriteStuff[2]);
       console.log(favArray);
-        $(".favoritesMod").append('<li>' + favArray[0] + '</li>');
-        $(".favoritesMod").append('<li>' + favArray[1] + '</li>');
-        $(".favoritesMod").append('<li>' + favArray[2] + '</li>');
+      favArray.forEach(function(mod) {
+        $(".favoritesMod").append("<li>" + mod + "</li>");
+      });
 
     } else {
       console.log("add another item");
